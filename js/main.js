@@ -19,3 +19,8 @@ function randomQuoteGen() {
   var randomMathGen = Math.floor(Math.random()*(quoteArray.length));
   document.getElementById('quotebox').innerHTML = quoteArray[randomMathGen] + credits;
 };
+
+var  tweetUrl = "https://twitter.com/intent/tweet?text=" + randomQuoteGen;
+
+document.getElementById('tweetQuote').setAttribute("href", tweetUrl);
+}  
