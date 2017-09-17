@@ -22,5 +22,5 @@ function randomQuoteGen() {
 
 var  tweetUrl = "https://twitter.com/intent/tweet?text=" + randomQuoteGen;
 
-document.getElementById('tweetQuote').setAttribute("href", tweetUrl);
+document.getElementById('tweet-quote').setAttribute("href", tweetUrl);
 }  
