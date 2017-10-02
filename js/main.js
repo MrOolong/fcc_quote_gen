@@ -17,5 +17,5 @@ var credits = " -G.K. Chesterton";
 
 function randomQuoteGen() {
   var randomMathGen = Math.floor(Math.random()*(quoteArray.length));
-  document.getElementById('quotebox').innerHTML = quoteArray[randomMathGen] + credits;
+  document.getElementById('quotebox').innerHTML = '"' + quoteArray[randomMathGen] + '"' + credits;
 };
