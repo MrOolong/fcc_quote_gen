@@ -36,4 +36,3 @@ function randomQuoteGen() {
   window.open("https://twitter.com/intent/tweet?text=" + textToTweet);
   }; */
 };
->>>>>>> v1
