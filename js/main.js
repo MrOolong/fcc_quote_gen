@@ -17,5 +17,21 @@ var credits = " -G.K. Chesterton";
 
 function randomQuoteGen() {
   var randomMathGen = Math.floor(Math.random()*(quoteArray.length));
-  document.getElementById('quotebox').innerHTML = '"' + quoteArray[randomMathGen] + '"' + credits;
+  document.getElementById('quotebox').innerHTML = '"' + quoteArray[randomMathGen] + '"' + credits + " ";
+  
+  var tweetQuote = quoteArray[randomMathGen];
+
+  twttr.widgets.createShareButton(
+  '/',
+  document.getElementById('quotebox'),
+  {
+    text: document.getElementById('quotebox').innerHTML
+  }
+);
+  
+ /* function shareTweet(){
+  var textToTweet = tweetQuote;
+  textToTweet = encodeURI(textToTweet)
+  window.open("https://twitter.com/intent/tweet?text=" + textToTweet);
+  }; */
 };
