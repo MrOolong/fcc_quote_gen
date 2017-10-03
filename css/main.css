@@ -1,4 +1,9 @@
-h3 {
-    font-style: italic;
+h1 {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 3em;
 }
 
+h3 {
+    font-style: italic;
+    font-family: 'Open Sans', cursive;
+}
