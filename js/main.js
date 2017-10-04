@@ -11,7 +11,7 @@ quoteArray[7] = "There are two kinds of revolutionists, as of most things – a 
 quoteArray[8] = "It is perfectly obvious that in any decent occupation (such as bricklaying or writing books) there are only two ways (in any special sense) of succeeding. One is by doing very good work, the other is by cheating.";
 quoteArray[9] = "I would rather a boy learnt in the roughest school the courage to hit a politician, or gained in the hardest school the learning to refute him – rather than that he should gain in the most enlightened school the cunning to copy him.";
 
-var credits = " -G.K. Chesterton";
+var credits = " -G.K. Chesterton ";
 
 //console.log(quoteArray.q1 + credits);
 
@@ -36,3 +36,9 @@ function randomQuoteGen() {
   window.open("https://twitter.com/intent/tweet?text=" + textToTweet);
   }; */
 };
+
+$(document).ready(function(){
+$("#getquote").click(function() {
+  $('.pulse').toggleClass('fadeInLeft');
+  });
+});
