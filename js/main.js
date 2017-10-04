@@ -1,5 +1,4 @@
 var quoteArray = []
-
 quoteArray[0] = "Courage is almost a contradiction in terms. It means a strong desire to live taking the form of a readiness to die.";
 quoteArray[1] = "A dead thing can go with the stream, but only a living thing can go against it.";
 quoteArray[2] = "Men do not differ much about what things they will call evils; they differ enormously about what evils they will call excusable.";
@@ -12,33 +11,25 @@ quoteArray[8] = "It is perfectly obvious that in any decent occupation (such as 
 quoteArray[9] = "I would rather a boy learnt in the roughest school the courage to hit a politician, or gained in the hardest school the learning to refute him – rather than that he should gain in the most enlightened school the cunning to copy him.";
 
 var credits = " -G.K. Chesterton ";
-
 //console.log(quoteArray.q1 + credits);
 
 function randomQuoteGen() {
-  var randomMathGen = Math.floor(Math.random()*(quoteArray.length));
+	var randomMathGen = Math.floor(Math.random() * (quoteArray.length));
+	document.getElementById('quotebox').innerHTML = '"' + quoteArray[randomMathGen] + '"' + credits + " ";
 
-  document.getElementById('quotebox').innerHTML = '"' + quoteArray[randomMathGen] + '"' + credits + " ";
-  
-  var tweetQuote = quoteArray[randomMathGen];
-
-  twttr.widgets.createShareButton(
-  '/',
-  document.getElementById('quotebox'),
-  {
-    text: document.getElementById('quotebox').innerHTML
-  }
-);
-  
- /* function shareTweet(){
-  var textToTweet = tweetQuote;
-  textToTweet = encodeURI(textToTweet)
-  window.open("https://twitter.com/intent/tweet?text=" + textToTweet);
-  }; */
+	var tweetQuote = quoteArray[randomMathGen];
+	twttr.widgets.createShareButton('/', document.getElementById('quotebox'), {
+		text: document.getElementById('quotebox').innerHTML
+	});
+	/* function shareTweet(){
+	 var textToTweet = tweetQuote;
+	 textToTweet = encodeURI(textToTweet)
+	 window.open("https://twitter.com/intent/tweet?text=" + textToTweet);
+	 }; */
 };
 
-$(document).ready(function(){
-$("#getquote").click(function() {
-  $('.pulse').toggleClass('fadeInLeft');
-  });
+$(document).ready(function() {
+	$("#getquote").click(function() {
+		$('.pulse').toggleClass('fadeInLeft');
+	});
 });
